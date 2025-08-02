@@ -1,5 +1,5 @@
 def main():
-    print("Hello from google-gemini-cli!")
+    print("Hello from flask-todo!")
 
 
 if __name__ == "__main__":
