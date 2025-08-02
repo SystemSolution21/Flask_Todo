@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # Configuration files
-config.py
+./instance/config.py
