@@ -25,8 +25,8 @@ This is a simple todo app built with Flask and SQLAlchemy. It allows users to cr
 4. Run the app
 
 ```bash
-git clone https://github.com/systemsolution21/flask-todo.git
-cd flask-todo
+git clone https://github.com/systemsolution21/Flask-Todo.git
+cd Flask-Todo
 uv venv
 .venv/bin/activate
 uv sync
