@@ -1,5 +1,3 @@
 # instance/config.py
-SECRET_KEY = "a-very-secret-key-that-you-should-change"
-SQLALCHEMY_DATABASE_URI = (
-    "postgresql://todo_user:your_secret_password@localhost/todo_db"
-)
+SECRET_KEY = "2769ec770762cfdff4919f33283fe687ed49e6a1d83332f4"
+SQLALCHEMY_DATABASE_URI = "postgresql://flask_todo_user:admin@localhost/flask_todo_db"
