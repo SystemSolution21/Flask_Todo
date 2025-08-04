@@ -1,0 +1,22 @@
+Flask-Todo/
+├── todo/                   # Main application package
+│   ├── __init__.py         # App factory and configuration
+│   ├── auth.py             # Authentication blueprint
+│   ├── views.py            # Main views blueprint
+│   ├── models.py           # Database models
+│   ├── static/             # Static files
+│   │   └── style.css
+│   └── templates/          # Jinja2 templates
+│       ├── base.html
+│       ├── index.html
+│       └── login.html
+├── instance/
+│   └── config.py           # Configuration template
+|── .gitignore
+├── LICENSE.txt
+├── README.md
+├── project_summary.md
+├── project_structure.txt
+├── wsgi.py                 # WSGI entry point
+├── pyproject.toml          # Project dependencies
+└── .flaskenv               # Flask environment variables
