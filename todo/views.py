@@ -23,10 +23,10 @@ def index():
 @login_required
 def add():
     todo_text = request.form.get("todo")
-    if not todo_text:
+    if todo_text is None or not todo_text.strip():
         flash("To-do content cannot be empty.", "warning")
     else:
-        new_todo = Todo(text=todo_text, user_id=current_user.id)  # type: ignore
+        new_todo = Todo(text=todo_text.strip(), user_id=current_user.id)  # type: ignore
         db.session.add(new_todo)
         db.session.commit()
     return redirect(url_for("views.index"))
@@ -63,10 +63,12 @@ def edit(todo_id):
     ).first_or_404()
     if request.method == "POST":
         new_text = request.form.get("todo")
-        if new_text:
-            todo_to_edit.text = new_text
+        if new_text is None or not new_text.strip():
+            flash("To-do content cannot be empty.", "warning")
+        else:
+            todo_to_edit.text = new_text.strip()
             db.session.commit()
             flash("To-do item updated successfully.", "success")
-        return redirect(url_for("views.index"))
+            return redirect(url_for("views.index"))
 
     return render_template("edit.html", todo=todo_to_edit)

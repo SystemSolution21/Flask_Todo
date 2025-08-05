@@ -28,8 +28,8 @@ def register():
             return redirect(url_for("auth.register"))
 
         new_user = User(
-            username=username,
-            password=generate_password_hash(password, method="pbkdf2:sha256"),
+            username=username,  # type: ignore
+            password=generate_password_hash(password, method="pbkdf2:sha256"),  # type: ignore
         )
         db.session.add(new_user)
         db.session.commit()
@@ -47,7 +47,7 @@ def login():
         password = request.form.get("password")
         user = User.query.filter_by(username=username).first()
 
-        if not user or not check_password_hash(user.password, password):
+        if not user or not check_password_hash(user.password, password):  # type: ignore
             flash("Please check your login details and try again.", "danger")
             return redirect(url_for("auth.login"))
 

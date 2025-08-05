@@ -11,3 +11,6 @@ wheels/
 
 # Configuration files
 instance/config.py
+
+# Environment variables
+.env
