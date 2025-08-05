@@ -9,7 +9,7 @@ services:
     env_file:
       - .env
     environment:
-      - DATABASE_URL=postgresql://todo_user:todo_password@db:5432/todo_db
+      - DATABASE_URL=postgresql://flask_todo_user:admin@db:5432/flask_todo_db
     depends_on:
       - db
 
@@ -18,9 +18,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=todo_user
-      - POSTGRES_PASSWORD=todo_password
-      - POSTGRES_DB=todo_db
+      - POSTGRES_USER=flask_todo_user
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=flask_todo_db
 
 volumes:
   postgres_data:

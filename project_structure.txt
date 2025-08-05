@@ -10,8 +10,7 @@ Flask-Todo/
 │       ├── base.html
 │       ├── index.html
 │       └── login.html
-├── instance/
-│   └── config.py           # Configuration template
+├── instance/ # Configuration template
 |── .gitignore
 ├── LICENSE.txt
 ├── README.md
