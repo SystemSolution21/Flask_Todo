@@ -23,9 +23,12 @@ def index():
 @login_required
 def add():
     todo_text = request.form.get("todo")
-    new_todo = Todo(text=todo_text, user_id=current_user.id)  # type: ignore
-    db.session.add(new_todo)
-    db.session.commit()
+    if not todo_text:
+        flash("To-do content cannot be empty.", "warning")
+    else:
+        new_todo = Todo(text=todo_text, user_id=current_user.id)  # type: ignore
+        db.session.add(new_todo)
+        db.session.commit()
     return redirect(url_for("views.index"))
 
 

@@ -32,7 +32,7 @@
         {% endfor %}
     </ul>
     {% else %}
-    <div class="alert alert-primary text-center" role="alert">
+    <div class="alert alert-primary text-center me-4" role="alert">
         Please <a href="{{ url_for('auth.login') }}" class="alert-link">log in</a> or <a
             href="{{ url_for('auth.register') }}" class="alert-link">register</a> to see your to-do list.
     </div>

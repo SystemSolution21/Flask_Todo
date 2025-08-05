@@ -19,6 +19,10 @@ def register():
         username = request.form.get("username")
         password = request.form.get("password")
 
+        if not username or not password:
+            flash("Username and password are required.", "warning")
+            return redirect(url_for("auth.register"))
+
         if User.query.filter_by(username=username).first():
             flash("Username already exists.", "warning")
             return redirect(url_for("auth.register"))
