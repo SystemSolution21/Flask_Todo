@@ -1,0 +1,44 @@
+# Virtual environments (exclude from container)
+.venv/
+venv/
+env/
+.uv-cache/
+
+# Environment files
+.env
+.env.*
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Development files
+.python-version
+Dockerfile*
+.dockerignore
+docker-compose*.yml
+requirements.txt
+
+# Git and IDE
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Documentation
+LICENSE
+README.md
+project_summary.md
+project_structure.txt
+
+# Database and logs
+db.sqlite3
+instance/
+*.log
+**/.cache/
+
+# Test-related
+.pytest_cache/
