@@ -14,7 +14,7 @@ services:
 
   db:
     image: postgres:17
-    restart: always
+    restart: "no"
     environment:
       - POSTGRES_DB=todo_db
       - POSTGRES_USER=todo_user
